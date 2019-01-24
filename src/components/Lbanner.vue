@@ -29,6 +29,9 @@
 <script>
 import "bootstrap/dist/js/bootstrap.js";
 import "bootstrap/dist/css/bootstrap.css";
+//错误路径
+// import './node_modules/bootstrap/dist/css/bootstrap.css';
+// import './node_modules/bootstrap/dist/js/bootstrap.js';
 
 export default {};
 </script>
