@@ -17,6 +17,7 @@ import wfooter from "../pagesone/Wfooter.vue";
 
 import mine from '../pagesone/mine.vue'
 import shopcar from '../pagesone/shopcar.vue'
+import detail from '../pagesone/detail.vue'
 
 const routes = [
     // 如果url的路由为 /foo，进入Foo组件
@@ -51,6 +52,11 @@ const routes = [
         path: '/shopcar',
         name: 'shopcar',
         component: shopcar
+    },
+    {
+        path: '/detail',
+        name: 'detail',
+        component: detail
     },
 
     // 重定向路由，比如刚进页面的时候，默认跳转的路由位置
