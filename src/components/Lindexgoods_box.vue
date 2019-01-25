@@ -15,12 +15,35 @@
 <script>
 
 export default {
-  components: {
+    data(){
+        return{
+            goodslist:[]
+        }
+    },
+    methods:{
+        async getGoodslest(){
+            let goodslistdata = await this.$axios.get(
+                "http://localhost:3000/findgoods",{
+                    // params:{
+                    //     page:1,
+                    //     find:{},
+                    //     qty:1
+                    // }
+                }
+            )
+            // console.log(goodslistdata)
+            this.goodslist = goodslistdata.data
+        }
+    },
+      mounted() {
+        this.getGoodslest();
+    },
+    components: {
 
-  },
-  destroyed() {
+    },
+    destroyed() {
 
-  },
+    },
 }
 </script>
 <style scoped>
