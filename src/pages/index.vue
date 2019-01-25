@@ -3,7 +3,7 @@
     <Lheader />
     <Xsearch></Xsearch>
     <Lbanner></Lbanner>
-    index
+    <Lindexgoods></Lindexgoods>
     <Wfooter></Wfooter>
   </div>
 </template>
@@ -11,7 +11,7 @@
 import Lheader from "../components/Lheader.vue";
 import Xsearch from "../components/Xsearch.vue";
 import Lbanner from "../components/Lbanner.vue";
-
+import Lindexgoods from "../components/Lindexgoods.vue";
 import Wfooter from "../pagesone/Wfooter.vue";
 
 export default {
@@ -19,8 +19,12 @@ export default {
     Lheader,
     Xsearch,
     Lbanner,
+    Lindexgoods,
     Wfooter
-  }
+  },
+  destroyed() {
+    // console.log("index88")
+  },
 }
   
 </script>
