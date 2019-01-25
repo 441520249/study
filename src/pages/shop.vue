@@ -1,14 +1,13 @@
 <template>
   <div>
-    shop
-    <Wfooter></Wfooter>
+    shop逛
   </div>
 </template>
 <script>
-import Wfooter from "../pagesone/Wfooter.vue";
+
 export default {
   components: {
-      Wfooter
+
   },
   destroyed() {
     // console.log("shop88")
