@@ -1,5 +1,6 @@
 // 引入vue
 import Vue from 'vue'
+//引入根部APP组件
 import App from './App.vue'
 
 // 引入路由模块
@@ -13,7 +14,6 @@ import './styles/common.css'
 import 'bootstrap'
 //引入 微信样式
 import 'weui'
-
 
 
 // 引入ajax库
@@ -37,5 +37,5 @@ new Vue({
     router,
     // 挂载仓库
     store
-    // 把App组件挂载到#app的这个节点上
-}).$mount('#app')
+    // 把App根部组件挂载到#yohobuy的这个节点上
+}).$mount('#yohobuy')

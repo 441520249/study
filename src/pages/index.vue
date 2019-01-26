@@ -1,7 +1,7 @@
 <template>
   <div>
     <Lheader />
-    <Xsearch></Xsearch>
+    <Wsearch></Wsearch>
     <Lbanner></Lbanner>
     <Lindexgoods></Lindexgoods>
 
@@ -9,14 +9,14 @@
 </template>
 <script>
 import Lheader from "../components/Lheader.vue";
-import Xsearch from "../components/Xsearch.vue";
+import Wsearch from "../components/Wsearch.vue";
 import Lbanner from "../components/Lbanner.vue";
 import Lindexgoods from "../components/Lindexgoods.vue";
 
 export default {
   components: {
     Lheader,
-    Xsearch,
+    Wsearch,
     Lbanner,
     Lindexgoods
   },

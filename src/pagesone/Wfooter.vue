@@ -9,10 +9,15 @@
                 </span>
                 <p class="weui-tabbar__label">首页</p>
             </router-link>
-            <router-link to="/wfooter/classify" class="weui-tabbar__item">
+            <!-- 编程式导航 -->
+            <a @click="toClassify" class="weui-tabbar__item">
                 <img src="../assets/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                 <p class="weui-tabbar__label">分类</p>
-            </router-link>
+            </a>
+            <!-- <router-link to="/wfooter/classify" class="weui-tabbar__item">
+                <img src="../assets/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <p class="weui-tabbar__label">分类</p>
+            </router-link>-->
             <router-link to="/wfooter/shop" class="weui-tabbar__item">
                 <span style="display: inline-block;position: relative;">
                     <img src="../assets/icon_tabbar.png" alt="" class="weui-tabbar__icon">
@@ -25,15 +30,29 @@
                 <p class="weui-tabbar__label">购物车</p>
             </router-link>
             <router-link to="/mine" class="weui-tabbar__item">
-                <img src="../assets/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <img :src="iconTabber" alt="" class="weui-tabbar__icon">
                 <p class="weui-tabbar__label">我的</p>
             </router-link>
         </div>
     </div>
 </template>
 <script>
+//图片可以引用进来  /shopcar--/mine
+import iconTabber from '../assets/icon_tabbar.png'
 export default {
-
+    data(){
+        return {
+            iconTabber
+        };
+    },
+    // 编程式导航
+    methods:{
+        toClassify(){
+            // this.$router.push('/wfooter/classify')
+            // 根据命名路由来进行跳转
+            this.$router.push({name:'classify'})
+        }
+    }
 }
 </script>
 

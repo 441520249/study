@@ -1,14 +1,14 @@
 <template>
   <div>
-   <Xsearch></Xsearch>
+   <Wsearch></Wsearch>
     class
   </div>
 </template>
 <script>
-import Xsearch from "../components/Xsearch.vue";
+import Wsearch from "../components/Wsearch.vue";
 export default {
   components: {
-    Xsearch,
+    Wsearch,
 
   }
 } 
