@@ -1,5 +1,6 @@
 // 路由配置
 
+
 // 引入vue模块
 import Vue from 'vue'
 // 引入路由模块
@@ -7,38 +8,45 @@ import VueRouter from 'vue-router'
 // 显式安装该模块
 Vue.use(VueRouter)
 
-// 引入index页面组件
-import index from '../pages/index.vue'
-import classify from '../pages/classify.vue'
-import shop from '../pages/shop.vue'
+
+// 引入wfooter页面下的组件
+import Index from '../pages/Index.vue'
+import Classify from '../pages/Classify.vue'
+import Shop from '../pages/Shop.vue'
+
 
 //一级页面
-import wfooter from "../pagesone/Wfooter.vue";
+//底部路由 底部组件
+import Wfooter from "../pagesone/Wfooter.vue";
+import Mine from '../pagesone/Mine.vue'
+import Shopcar from '../pagesone/Shopcar.vue'
+//详情页路由 详情页组件
+import Detail from '../pagesone/Detail.vue'
 
-import mine from '../pagesone/mine.vue'
-import shopcar from '../pagesone/shopcar.vue'
-import detail from '../pagesone/detail.vue'
 
+// 配置路由
 const routes = [
-    // 如果url的路由为 /foo，进入Foo组件
+    // 如果url的路由为 /wfooter，进入Wfooter组件
     {
         path: '/wfooter',
+        // 路由命名，方便跳转
         name: 'wfooter',
-        component: wfooter,
+        component: Wfooter,
         children: [{
+                // 嵌套路由里面的path要删掉/
                 path: 'index',
                 name: 'index',
-                component: index
+                component: Index
             },
             {
                 path: 'classify',
                 name: 'classify',
-                component: classify
+                component: Classify
             },
             {
                 path: 'shop',
                 name: 'shop',
-                component: shop
+                component: Shop
             },
         ]
     },
@@ -46,19 +54,18 @@ const routes = [
     {
         path: '/mine',
         name: 'mine',
-        component: mine
+        component: Mine
     },
     {
         path: '/shopcar',
         name: 'shopcar',
-        component: shopcar
+        component: Shopcar
     },
     {
         path: '/detail',
         name: 'detail',
-        component: detail
+        component: Detail
     },
-
     // 重定向路由，比如刚进页面的时候，默认跳转的路由位置
     {
         path: '/',
@@ -68,6 +75,7 @@ const routes = [
     }
 ]
 
+//实例该路由配置
 const router = new VueRouter({
     routes,
     // scrollBehavior(to, from, savedPosition) {

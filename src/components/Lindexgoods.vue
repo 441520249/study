@@ -1,28 +1,31 @@
 <template>
+ <!-- View层 -->
 <div class="box">
-<div @click="getGoodslist" class="weui-cell__bd">查看更多</div>
-    <ul class="content">
-        <li class="goodscontent" v-for="(goods,index) in goodslist" :key="index">
-            <router-link to="/detail">
-                <img class="goodsimg" :src="goods.deal_pic">
-                <div class="goodscon">
-                    <p v-text="goods.store_name"></p>
-                    <div class="price">
-                        <span  v-text="goods.original_price"></span>
-                        <span class="market-price">¥299.00</span>
+    <div @click="getGoodslist" class="weui-cell__bd">查看更多</div>
+        <ul class="content">
+            <li class="goodscontent" v-for="(goods,index) in goodslist" :key="index">
+                <router-link to="/detail">
+                    <img class="goodsimg" :src="goods.deal_pic">
+                    <div class="goodscon">
+                        <p v-text="goods.store_name"></p>
+                        <div class="price">
+                            <span  v-text="goods.original_price"></span>
+                            <span class="market-price">¥299.00</span>
+                        </div>
                     </div>
-                </div>
-            </router-link>  
-        </li>
-    </ul>
+                </router-link>  
+            </li>
+        </ul>
     <div @click="getGoodslist" class="weui-cell__bd">查看更多</div>
 </div>
 </template>
 <script>
 
 export default {
+     // Model层
     data(){
         return{
+             // 存放新闻数据
             goodslist:[],
             currentPage: 0
         }

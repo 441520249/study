@@ -10,7 +10,7 @@ export default {
 
   },
   destroyed() {
-    // console.log("shop88")
+    
   },
 }
 </script>

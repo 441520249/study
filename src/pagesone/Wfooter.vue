@@ -55,8 +55,6 @@ export default {
     }
 }
 </script>
-
-
 <style scoped>
 .weui-tabbar {
   position: fixed;

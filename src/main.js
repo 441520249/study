@@ -3,10 +3,12 @@ import Vue from 'vue'
 //引入根部APP组件
 import App from './App.vue'
 
-// 引入路由模块
-import router from './config/router.js'
+
+// 引入路由模块--在router.js显示安装
+import router from './configs/router.js'
 // 引入仓库
-import store from './config/store.js'
+import store from './configs/store.js'
+
 
 // 引入全局样式
 import './styles/common.css'
@@ -20,7 +22,8 @@ import 'weui'
 import axios from 'axios'
 // 把库挂载到原型链
 Vue.prototype.$axios = axios
-    // 引入jQuery库
+
+// 引入jQuery库
 import $ from 'jquery'
 // 把库挂载到原型链
 Vue.prototype.$ = $
@@ -28,6 +31,7 @@ Vue.prototype.$ = $
 
 
 Vue.config.productionTip = false
+
 
 
 // Root容器
