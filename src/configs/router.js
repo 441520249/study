@@ -22,6 +22,7 @@ import Mine from '../pagesone/Mine.vue'
 import Shopcar from '../pagesone/Shopcar.vue'
 //详情页路由 详情页组件
 import Detail from '../pagesone/Detail.vue'
+import Login from '../pagesone/Login.vue'
 
 
 // 配置路由
@@ -62,9 +63,14 @@ const routes = [
         component: Shopcar
     },
     {
-        path: '/detail',
+        path: '/detail/:id/:name',
         name: 'detail',
         component: Detail
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login
     },
     // 重定向路由，比如刚进页面的时候，默认跳转的路由位置
     {
@@ -74,6 +80,7 @@ const routes = [
         }
     }
 ]
+
 
 //实例该路由配置
 const router = new VueRouter({
@@ -86,5 +93,32 @@ const router = new VueRouter({
     //     }
     // }
 })
+
+
+
+router.beforeEach((to, from, next) => {
+    //3秒后进入页面
+    // setTimeout(() => {
+    //     next()
+    // }, 3000)
+
+    //模拟登陆验证token
+    let token = localStorage.getItem("token");
+    // 如果token是123456的话进去目标页面，否则返回'/sign'页面
+    if (token == 123456 || to.path == '/login') {
+        next()
+            // console.log(to.path, from)
+    } else {
+        // console.log(to.path, from)
+        // 如果失败跳转登录页面
+        router.push({
+                name: "login"
+            })
+            // console.log('登录失败')
+    }
+})
+
+
+
 
 export default router;

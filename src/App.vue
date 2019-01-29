@@ -2,6 +2,8 @@
   <div id="app">
     <router-view></router-view>
   <!--在template使用-->
+     <!--<Wloading />
+     <Wsuccess />-->
   </div>
 </template>
 

@@ -4,7 +4,7 @@
     <div @click="getGoodslist" class="weui-cell__bd">查看更多</div>
         <ul class="content">
             <li class="goodscontent" v-for="(goods,index) in goodslist" :key="index">
-                <router-link to="/detail">
+                <router-link :to="`/detail/${index}/${'lemon'}`">
                     <img class="goodsimg" :src="goods.deal_pic">
                     <div class="goodscon">
                         <p v-text="goods.store_name"></p>
@@ -27,7 +27,8 @@ export default {
         return{
              // 存放新闻数据
             goodslist:[],
-            currentPage: 0
+            currentPage: 0,
+            name
         }
     },
     methods:{
