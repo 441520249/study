@@ -4,8 +4,11 @@
     <div @click="getGoodslist" class="weui-cell__bd">查看更多</div>
         <ul class="content">
             <li class="goodscontent" v-for="(goods,index) in goodslist" :key="index">
+                <!--动态路由匹配（传参）   跳详情页（嵌套路由）-->
                 <router-link :to="`/detail/${index}/${'lemon'}`">
-                    <img class="goodsimg" :src="goods.deal_pic">
+                    <!--<img class="goodsimg" :src="goods.deal_pic">-->
+                    <!--懒加载-->
+                    <img class="goodsimg" v-lazy="goods.deal_pic">
                     <div class="goodscon">
                         <p v-text="goods.store_name"></p>
                         <div class="price">
@@ -16,7 +19,6 @@
                 </router-link>  
             </li>
         </ul>
-    <div @click="getGoodslist" class="weui-cell__bd">查看更多</div>
 </div>
 </template>
 <script>

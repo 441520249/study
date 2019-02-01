@@ -1,5 +1,6 @@
 <template>
-  <article class="weui-article">
+  <article class="weui-article"> 
+    <div>Detail {{ $route.params.id }} {{ $route.params.name }}</div>
     <h1>大标题</h1>
     <section>
       <h2 class="title">章标题</h2>

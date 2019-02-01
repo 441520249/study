@@ -29,6 +29,9 @@ import $ from 'jquery'
 Vue.prototype.$ = $
 
 
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload);
+
 
 Vue.config.productionTip = false
 

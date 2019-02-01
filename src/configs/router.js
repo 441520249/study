@@ -5,7 +5,7 @@
 import Vue from 'vue'
 // 引入路由模块
 import VueRouter from 'vue-router'
-// 显式安装该模块
+// 显式安装该路由模块
 Vue.use(VueRouter)
 
 
@@ -42,7 +42,11 @@ const routes = [
             {
                 path: 'classify',
                 name: 'classify',
-                component: Classify
+                component: Classify,
+                //路由传参
+                meta: {
+                    skill: 'ps'
+                }
             },
             {
                 path: 'shop',
@@ -78,6 +82,12 @@ const routes = [
         redirect: {
             name: 'index'
         }
+    },
+    //别名
+    {
+        path: 'shopcar',
+        component: Shopcar,
+        alias: '/b'
     }
 ]
 
@@ -107,6 +117,7 @@ router.beforeEach((to, from, next) => {
     // 如果token是123456的话进去目标页面，否则返回'/sign'页面
     if (token == 123456 || to.path == '/login') {
         next()
+            // console.log(to, from, next)
             // console.log(to.path, from)
     } else {
         // console.log(to.path, from)
