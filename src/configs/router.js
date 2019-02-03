@@ -39,7 +39,7 @@ const routes = [
                 name: 'index',
                 component: Index
             },
-            {
+            { //编程式导航传参
                 path: 'classify',
                 name: 'classify',
                 component: Classify,
@@ -67,6 +67,8 @@ const routes = [
         component: Shopcar
     },
     {
+        // 就是可以在:id里面接受一个不固定的值
+        // 动态路由匹配（路由传参）
         path: '/detail/:id/:name',
         name: 'detail',
         component: Detail

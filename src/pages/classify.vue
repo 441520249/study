@@ -1,7 +1,8 @@
 <template>
   <div>
    <Wsearch></Wsearch>
-    class
+    <div>$route.params.userId: {{ $route.params.userId }} $route.meta.skill:{{ $route.meta.skill }}</div>
+    classify
   </div>
 </template>
 <script>

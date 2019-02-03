@@ -50,11 +50,11 @@ export default {
         toClassify(){
             // this.$router.push('/wfooter/classify')
             // 根据命名路由来进行跳转
-            this.$router.push({name:'classify'})
+            // this.$router.push({name:'classify'})
             //编程式导航传参
-            // const userId = '123'
-            // router.push({ name: 'user', params: { userId }}) // -> /user/123
-            // router.push({ path: `/user/${userId}` }) // -> /user/123
+            const userId = '123'
+            this.$router.push({ name: 'classify', params: { userId }}) // -> /classify/123
+            //this.$router.push({ path: `/classifys/${userId}` }) // -> /classify/123
         }
     }
 }

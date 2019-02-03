@@ -2,7 +2,7 @@
   <div>
     <Lheader />
     <Wsearch></Wsearch>
-    <Lbanner></Lbanner>
+    <Lbanner :imgUrl="bannerUrl" :height="bannerHeight"></Lbanner>
     <Lindexgoods></Lindexgoods>
 
   </div>
@@ -19,6 +19,12 @@ export default {
     Wsearch,
     Lbanner,
     Lindexgoods
+  },
+  data(){
+    return {
+      bannerUrl:["../assets/banner1.jpg","../assets/banner2.jpg","../assets/banner3.jpg","../assets/banner4.jpg","../assets/banner5.jpg"],
+      bannerHeight:400
+    }
   },
   destroyed() {
     // console.log("index88")

@@ -37,12 +37,13 @@ export default {
       picArticle
     };
   },
-  // created() {
-  //   // 获取url上的参数
-  //   console.log(this.$route);
-  //   // 编程式导航
-  //   console.log(this.$router);
-  // },
+  created() {
+    // 获取url上的参数
+    // console.log(this.$route);
+    // console.log(this.$route.params.id);
+    // 编程式导航
+    // console.log(this.$router);
+  },
   // watch: {
   //   $route() {
   //     console.log(this.$route);
